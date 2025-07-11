@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SNT Project</title>
+  <style>
+    
+  body {
+    font-family: Arial, sans-serif;
+    background: url("/static/parret.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 30px;
+    margin: 0;
+  }
+
+
+  .container {
+    background: rgba(179, 132, 3, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  h2 {
+    text-align: center;
+    color: #fffdfd;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fcf9f9;
+  }
+
+  input, textarea {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #7e7d7d;
+    border-radius: 4px;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 99%;
+    padding: 10px;
+    background: #007BFF;
+    color: rgb(252, 252, 252);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }
+
+  button:hover {
+    background: #017e35;
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h2>SNT Project</h2>
+    <form action="/submit" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" title="Enter 10-digit mobile number">
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="aadhar">Aadhaar Number:</label>
+      <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}" title="Enter 12-digit Aadhaar number">
+
+      <label for="cost">Cost Received (₹):</label>
+      <input type="number" id="cost" name="cost" min="0" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
