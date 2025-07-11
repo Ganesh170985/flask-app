@@ -25,6 +25,10 @@ def insert_submission(name, mobile, address, aadhar, cost):
 def form():
     return render_template('form.html')
 
+@app.route('/')
+def home():
+    return '<h2>Hello! This is a Flask web app.</h2>'
+
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form['name']
